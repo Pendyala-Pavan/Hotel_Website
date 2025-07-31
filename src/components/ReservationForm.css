@@ -1,0 +1,139 @@
+.reservation-section {
+  background: linear-gradient(
+      #0a0a0ab3,
+      rgba(115, 114, 114, 0.6)
+    ),
+    url("/images/food1.jpg") no-repeat center center/cover;
+  margin-bottom: 0%;
+  margin-left: 0.25%;  
+  margin-right: 0.25%;
+  margin-top: 0.25%;
+  border: "5px solid #fff";
+   border-radius: 1%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reservation-overlay {
+  width: 100%;
+  max-width: 500px;
+  padding: 50px 30px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.reservation-container {
+  color: #fff;
+}
+
+.reservation-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffcc70;
+  font-weight: bold;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reservation-form input,
+.custom-time-picker {
+  width: 95%;
+  padding: 15px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+.reservation-form input:focus,
+.custom-time-picker:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffcc70;
+}
+
+.custom-time-picker input::placeholder {
+  color: #999;
+}
+
+/* React Time Picker Input Customization */
+.custom-time-picker input {
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  color: #333;
+  padding: 10px 0;
+}
+
+.reservation-form button {
+  padding: 14px;
+  background-color: #ffcc70;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  color: #333;
+}
+
+.reservation-form button:hover {
+  background-color: #ffd98c;
+  transform: translateY(-2px);
+}
+
+/* React Time Picker internal tweaks */
+.react-time-picker__wrapper {
+  border:lab(from color l a b);
+  background:hwb(from color h w b);
+  display:flexbox;
+  align-items: center;
+}
+
+.react-time-picker__inputGroup input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.react-time-picker__inputGroup input:focus {
+  outline: none;
+  border-color: #ffcc70;
+  box-shadow: 0 0 3px #ffcc70;
+}
+
+.react-time-picker__clear-button,
+.react-time-picker__clock-button {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .reservation-title {
+    font-size: 24px;
+  }
+
+  .reservation-form input,
+  .custom-time-picker,
+  .reservation-form button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .reservation-overlay {
+    padding: 30px 20px;
+  }
+}

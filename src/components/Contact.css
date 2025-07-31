@@ -1,0 +1,213 @@
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+
+  /* Combined background */
+background: linear-gradient(
+      rgba(97, 96, 96, 0.7),  /* Dark overlay with 50% opacity */
+      rgba(58, 58, 58, 0.5)
+    ),
+    url("/images/food6.jpg");
+  margin-left: 0.25%;  
+  margin-right: 0.25%;
+  margin-top: 0.25%;
+  border: "5px solid #fff";
+   border-radius: 1%;
+  margin-bottom: 0%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contact-about-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(
+      rgba(74, 73, 73, 0.7),
+      rgba(42, 41, 41, 0.5)
+    ),
+    url("/images/food6.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 1%;
+}
+
+.about-overlay {
+  background-color: rgba(60, 59, 59, 0.92);
+  padding: 20px;
+  border-radius: 8px;
+  width: 85%;
+  max-width: 500px;
+  color: #96e910;
+  box-shadow: 0 0 12px rgba(208, 226, 9, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-overlay:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px 6px rgba(234, 231, 231, 0.25);
+}
+
+.about-overlay h2,
+.about-overlay h3 {
+  color: #f2a60e;
+}
+
+/* Left side: contact form */
+.contact-form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Inner form card */
+.contact-overlay {
+  width: 80%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #2e2c2c;
+}
+
+.contact-overlay:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contact-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #cc8800;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: 500;
+  color: #2e2c2c;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 2px solid #cc8800;
+}
+
+.contact-button {
+  background-color: #cc8800;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #a56600;
+}
+
+.contact-info {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #2e2c2c;
+}
+
+/* Map section */
+.contact-map {
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Right side: image container */
+.contact-image-side {
+  flex: 1;
+  background: linear-gradient(
+      rgba(126, 124, 124, 0.7),  /* Dark overlay with 50% opacity */
+      rgba(0, 0, 0, 0.5)
+    ), url("/images/food1.jpg");
+      margin-left: 0.25%;  
+  margin-right: 0.25%;
+  margin-top: 0.25%;
+  border: "5px solid #fff";
+   border-radius: 1%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.contact-image-side::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(49, 48, 48, 0);
+  transition: background-color 0.4s ease;
+  z-index: 2;
+  border-radius: 100px;
+}
+
+.contact-image-side:hover::after {
+  background-color: rgba(49, 48, 48, 0.5);
+}
+
+/* Blinking animation */
+@keyframes backgroundBlink {
+  0%, 100% {
+    filter: brightness(0.5);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 500px) {
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .contact-image-side {
+    height: 200px;
+  }
+
+  .contact-form-side {
+    padding: 10px 5px;
+  }
+
+  .contact-overlay {
+    width: 90%;
+  }
+
+  .contact-title {
+    font-size: 1rem;
+  }
+}
